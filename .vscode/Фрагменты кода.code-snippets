@@ -14,5 +14,12 @@
 			"$2"
 		],
 		"description": "Log output to console"
+	},
+	"Тест": {
+		//"scope": "javascript,typescript",
+		"prefix": "j1",
+		"body": [
+			"margin: 0px 0px;"
+		],
+		"description": "Внешний отступ"
 	}
-}
