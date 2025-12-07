@@ -1,0 +1,17 @@
+services:
+
+    build1:
+        build:
+            context: ./maven
+        volumes:
+            - app:/app/boxfuse-sample-java-war-hello/target
+    tomcatexe:
+        image: tomcat:9.0-jdk8-corretto
+        ports:
+            - '8080:8080'
+        volumes:
+            - app:/usr/local/tomcat/webapps
+        depends-on:
+            - build1
+volumes:
+    app:
